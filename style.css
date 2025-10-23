@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+/* ヘッダー */
+.main-header {
+  background-color: #E6E8EA;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo {
+  height: 80px;
+}
+
+.main-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-header a {
+  text-decoration: none;
+  color: #4A5E7C;
+  font-size: 1.5rem;
+}
+
+.main-header a.active {
+  border-bottom: 2px solid #4A5E7C;
+}
+
+/* ヒーロー */
+.hero {
+    background-image: url(images/top.png);
+    background-position: center bottom;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #4A5E7C;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.hero2 {
+    text-align: center;
+    background-image: url(images/flower.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 900px;
+    padding: 0 10px;
+    margin: 10px auto;
+}
+
+/* 共通 */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 10px 20px 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h1 {
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 3rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+/* 画像 */
+.hero-img, .content-img, .news-list img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+/* フォーム */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #4A5E7C;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #E1B955;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #666;
+  background-color: #E6E8EA;
+  margin-top: 40px;
+}
+
+/* index.html */
+
+.intro {
+  position: relative;
+  background-image: url('images/school.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(74, 94, 124, 0.6);
+  z-index: 0;
+}
+
+.intro h2,.intro p {
+  position: relative;
+  z-index: 1;
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+
+.intro p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.intro span {
+  display: inline-block;
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.reason {
+    background-color:#E1B955 ;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.reason h2 {
+  border-bottom: 2px solid #333;
+}
+
+.philosophy {
+    background-color:#4A5E7C ;
+    color: #fff;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.philosophy h2 {
+  border-bottom: 2px solid #fff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+}
+
+/* infomation.html */
+.news-list li {
+  list-style: none;
+  list-style-position: inside;
+}
+
+.news-list {
+  padding: 0;
+}
+
+.class-info {
+  text-align: center;
+  background-color: #4A5E7C;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.highlight {
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: bold;
+  color: #E1B955;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+
+
+/* アニメーション */
+
+.fadein {
+    animation-name: fadein_anime;
+    animation-fill-mode: both;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+}
+
+@keyframes fadein_anime {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* モバイル対応 */
+@media(max-width: 767px) {
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    main {
+        padding: 0 4%;
+    }
+
+    /* index.html */
+    .hero {
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 28vh 0;
+        background-position: left top;
+        min-height: 50vh;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    h1, h2 {
+      font-size: 2rem;
+    }
+
+     .intro {
+      padding: 60px 15px; 
+      text-align: left;   
+    }
+
+    .intro::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(74, 94, 124, 0.6);
+    }
+
+    .intro h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8em;
+    }
+
+    .intro p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .intro span {
+      font-size: 1.1rem;
+    }
+
+
+    /* information.html */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight {
+      font-size: 1.2rem;
+    }
+
+    .class-info {
+      font-size: 1rem;
+    }
+}
+
+/* ---------------------------------------------------- */
+/* 印刷・PDF保存時用のCSSを追加 */
+/* ---------------------------------------------------- */
+@media print {
+  .hero {
+    /* 印刷時には高さを自動、または固定値に変更する */
+    min-height: 600px !important; 
+    
+    /* 補足: 念のため、最大高さを指定して画像のサイズを制御しても良い */
+    /* max-height: 300px !important; */ 
+
+    /* !important を付けることで、既存の100vh設定を強制的に上書きできます */
+  }
+
+  /*
+  必要であれば、画像以外の要素（例: タイトル、ヘッダーなど）を
+  PDFの1ページ目に確実に表示させるための調整も行えます。
+  */
+}
