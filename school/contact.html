@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | KOBE DESIGN ACADEMIA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kosugi+Maru&family=Londrina+Solid:wght@100;300;400;900&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo-area">
+      <a href="index.html"><img src="images/logo.png" alt="KOBE DESIGN ACADEMIA ロゴ" class="logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="information.html">information</a></li>
+        <li><a href="contact.html" class="active">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero2">
+    <h1>お問い合わせ</h1>
+  </div>
+
+  <main class="content">
+
+
+    <form class="contact-form">
+      <label>お名前</label>
+      <input type="text" name="name">
+
+      <label>メールアドレス</label>
+      <input type="email" name="email">
+
+      <label>電話番号</label>
+      <input type="tel" name="tel">
+
+      <label>ご用件</label>
+      <select name="youken" >
+                <option value="資料請求">資料請求</option>
+                <option value="入学について">入学について</option>
+                <option value="在学生の方">在学生の方はこちら</option>
+                <option value="その他">その他質問など</option>
+            </select>
+
+      <label>お問い合わせ内容</label>
+      <textarea name="message" rows="5"></textarea>
+
+      <button type="submit">送信</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© KOBE DESIGN ACADEMIA</p>
+  </footer>
+
+</body>
+</html>
